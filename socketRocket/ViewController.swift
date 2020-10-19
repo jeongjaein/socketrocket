@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         socketTestButton.do {
             $0.backgroundColor = .cyan
             $0.setTitle("소켓", for: .normal)
+            $0.addTarget(self, action: #selector(goToSocketRocket), for: .touchUpInside)
         }
     }
     
@@ -35,6 +36,14 @@ class ViewController: UIViewController {
             $0.widthAnchor.constraint(equalToConstant: 100).isActive = true
             $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
+    }
+    
+    @objc func goToSocketRocket() {
+        print("되냐")
+        let view = socketVIew()
+        view.modalPresentationStyle = .fullScreen
+        self.present(view, animated: true, completion: nil)
+        print("되냐")
     }
 
 }
