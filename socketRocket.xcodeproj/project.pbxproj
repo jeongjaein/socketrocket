@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		CC220422253DF65D001AC057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC220420253DF65D001AC057 /* LaunchScreen.storyboard */; };
 		CC22042D253DF65D001AC057 /* socketRocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC22042C253DF65D001AC057 /* socketRocketTests.swift */; };
 		CC220438253DF65D001AC057 /* socketRocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC220437253DF65D001AC057 /* socketRocketUITests.swift */; };
+		CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD595B253DF90C00EA90E5 /* socketView.swift */; };
+		CCFD5964253DFA2E00EA90E5 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD5963253DFA2E00EA90E5 /* SocketIOManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		CC220433253DF65D001AC057 /* socketRocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socketRocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC220437253DF65D001AC057 /* socketRocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketRocketUITests.swift; sourceTree = "<group>"; };
 		CC220439253DF65D001AC057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCFD595B253DF90C00EA90E5 /* socketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketView.swift; sourceTree = "<group>"; };
+		CCFD5963253DFA2E00EA90E5 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		D659364C7B14E7A456E193E4 /* Pods-socketRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socketRocket.debug.xcconfig"; path = "Target Support Files/Pods-socketRocket/Pods-socketRocket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +105,6 @@
 				8C5A093296EC81EE7FDEB988 /* Pods-socketRocketTests.debug.xcconfig */,
 				934D4593AC5156420A7C3B48 /* Pods-socketRocketTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +140,8 @@
 				CC22041E253DF65D001AC057 /* Assets.xcassets */,
 				CC220420253DF65D001AC057 /* LaunchScreen.storyboard */,
 				CC220423253DF65D001AC057 /* Info.plist */,
+				CCFD595B253DF90C00EA90E5 /* socketView.swift */,
+				CCFD5963253DFA2E00EA90E5 /* SocketIOManager.swift */,
 			);
 			path = socketRocket;
 			sourceTree = "<group>";
@@ -408,8 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC22041A253DF65B001AC057 /* ViewController.swift in Sources */,
+				CCFD5964253DFA2E00EA90E5 /* SocketIOManager.swift in Sources */,
 				CC220416253DF65B001AC057 /* AppDelegate.swift in Sources */,
 				CC220418253DF65B001AC057 /* SceneDelegate.swift in Sources */,
+				CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

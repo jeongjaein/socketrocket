@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         attribute()
         layout()
-        // Do any additional setup after loading the view.
     }
     
     func attribute() {
@@ -39,11 +38,9 @@ class ViewController: UIViewController {
     }
     
     @objc func goToSocketRocket() {
-        print("되냐")
-        let view = socketVIew()
+        let view = socketView()
         view.modalPresentationStyle = .fullScreen
         self.present(view, animated: true, completion: nil)
-        print("되냐")
     }
 
 }
