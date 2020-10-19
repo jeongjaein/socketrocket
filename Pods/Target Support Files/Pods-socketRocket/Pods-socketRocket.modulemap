@@ -1,0 +1,6 @@
+framework module Pods_socketRocket {
+  umbrella header "Pods-socketRocket-umbrella.h"
+
+  export *
+  module * { export * }
+}
