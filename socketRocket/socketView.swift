@@ -20,18 +20,24 @@ class socketView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         attribute()
         layout()
     }
     
     func attribute() {
+        view.do {
+            $0.backgroundColor = .black
+        }
         connectButton.do {
             $0.backgroundColor = .systemPink
             $0.setTitle("연결", for: .normal)
+            $0.addTarget(self, action: #selector(didConnectButtonClicked), for: .touchUpInside)
         }
         disconnectButton.do {
             $0.backgroundColor = .cyan
             $0.setTitle("끊기", for: .normal)
+            $0.addTarget(self, action: #selector(didDisConnectButtonClicked), for: .touchUpInside)
         }
         textField.do {
             $0.placeholder = "할얘기 있으면 하세요"
@@ -41,10 +47,12 @@ class socketView: UIViewController {
         emitButton.do {
             $0.backgroundColor = .orange
             $0.setTitle("방출", for: .normal)
+            $0.addTarget(self, action: #selector(didEmitButtonClicked), for: .touchUpInside)
         }
         backbutton.do {
             $0.backgroundColor = .gray
             $0.setTitle("뒤로가기", for: .normal)
+            $0.addTarget(self, action: #selector(didBackButtonClicked), for: .touchUpInside)
         }
     }
     
@@ -91,5 +99,16 @@ class socketView: UIViewController {
             $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
     }
-    
+    @objc func didConnectButtonClicked() {
+        print("c")
+    }
+    @objc func didDisConnectButtonClicked() {
+        print("d")
+    }
+    @objc func didEmitButtonClicked() {
+        print("e")
+    }
+    @objc func didBackButtonClicked() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
