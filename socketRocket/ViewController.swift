@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         attribute()
         layout()
         var uuid = TAKUUIDStorage.sharedInstance().findOrCreate()
+        print(uuid)
     }
     
     func attribute() {
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         viewModel.model = model
         
         view.modalPresentationStyle = .fullScreen
-        self.present(view, animated: true, completion: nil)
+        self.present(view, animated: false, completion: nil)
     }
 
 }

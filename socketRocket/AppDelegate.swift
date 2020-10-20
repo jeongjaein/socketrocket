@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initUUID() {
         TAKUUIDStorage.sharedInstance().migrate()
-        let UUID = TAKUUIDStorage.sharedInstance().findOrCreate()
+//        let UUID = TAKUUIDStorage.sharedInstance().findOrCreate()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

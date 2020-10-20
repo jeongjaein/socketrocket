@@ -15,26 +15,40 @@ class MannaListView: UIViewController {
     var mannaList = UITableView()
     
     var viewModel: MannaListViewModelProtocol?
+    var createMannaButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         attribute()
         layout()
         bind()
+        
     }
     
     func attribute() {
         mannaList.do {
-            $0.backgroundColor = .cyan
             $0.register(MannaListTableViewCell.self, forCellReuseIdentifier: MannaListTableViewCell.id)
+        }
+        createMannaButton.do {
+            $0.backgroundColor = .orange
+            $0.addTarget(self, action: #selector(createMannaAction), for: .touchUpInside)
+            $0.setTitle("약속만들러 가기", for: .normal)
         }
     }
     
     func layout() {
+        view.addSubview(createMannaButton)
         view.addSubview(mannaList)
         
+        createMannaButton.snp.makeConstraints{
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.centerX.equalTo(view.snp.centerX)
+            $0.width.equalTo(200)
+            $0.top.equalTo(70)
+        }
         mannaList.snp.makeConstraints {
-            $0.top.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalTo(createMannaButton.snp.bottom).offset(100)
+            $0.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -43,6 +57,11 @@ class MannaListView: UIViewController {
             .bind(to: mannaList.rx.items(cellIdentifier: MannaListTableViewCell.id, cellType: MannaListTableViewCell.self)) {(_: Int, element: Manna, cell: MannaListTableViewCell) in
             cell.title.text = element.id
         }.disposed(by: disposeBag)
+    }
+    
+    @objc func createMannaAction() {
+        let view = CreateMannaViewController()
+        self.present(view, animated: true, completion: nil)
     }
 }
 
