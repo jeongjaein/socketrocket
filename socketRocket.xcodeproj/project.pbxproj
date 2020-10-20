@@ -18,6 +18,7 @@
 		CC220422253DF65D001AC057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC220420253DF65D001AC057 /* LaunchScreen.storyboard */; };
 		CC22042D253DF65D001AC057 /* socketRocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC22042C253DF65D001AC057 /* socketRocketTests.swift */; };
 		CC220438253DF65D001AC057 /* socketRocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC220437253DF65D001AC057 /* socketRocketUITests.swift */; };
+		CCBD3153253EC280007F49A5 /* MannaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD3152253EC280007F49A5 /* MannaListView.swift */; };
 		CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD595B253DF90C00EA90E5 /* socketView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		CC220437253DF65D001AC057 /* socketRocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketRocketUITests.swift; sourceTree = "<group>"; };
 		CC220439253DF65D001AC057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBD3141253EB588007F49A5 /* socketRocket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socketRocket.entitlements; sourceTree = "<group>"; };
+		CCBD3152253EC280007F49A5 /* MannaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MannaListView.swift; sourceTree = "<group>"; };
 		CCFD595B253DF90C00EA90E5 /* socketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketView.swift; sourceTree = "<group>"; };
 		D659364C7B14E7A456E193E4 /* Pods-socketRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socketRocket.debug.xcconfig"; path = "Target Support Files/Pods-socketRocket/Pods-socketRocket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,8 @@
 		CC220414253DF65B001AC057 /* socketRocket */ = {
 			isa = PBXGroup;
 			children = (
+				CCBD3151253EC24D007F49A5 /* MannaOperation */,
+				CCBD3150253EC23D007F49A5 /* MannaList */,
 				CCBD3141253EB588007F49A5 /* socketRocket.entitlements */,
 				CC220415253DF65B001AC057 /* AppDelegate.swift */,
 				CC220417253DF65B001AC057 /* SceneDelegate.swift */,
@@ -161,6 +165,21 @@
 				CC220439253DF65D001AC057 /* Info.plist */,
 			);
 			path = socketRocketUITests;
+			sourceTree = "<group>";
+		};
+		CCBD3150253EC23D007F49A5 /* MannaList */ = {
+			isa = PBXGroup;
+			children = (
+				CCBD3152253EC280007F49A5 /* MannaListView.swift */,
+			);
+			path = MannaList;
+			sourceTree = "<group>";
+		};
+		CCBD3151253EC24D007F49A5 /* MannaOperation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MannaOperation;
 			sourceTree = "<group>";
 		};
 		DB53B43E6397B5009F10EE28 /* Frameworks */ = {
@@ -415,6 +434,7 @@
 				CC220416253DF65B001AC057 /* AppDelegate.swift in Sources */,
 				CC220418253DF65B001AC057 /* SceneDelegate.swift in Sources */,
 				CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */,
+				CCBD3153253EC280007F49A5 /* MannaListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-socketRocket/Pods-socketRocket-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework
-${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
 ${BUILT_PRODUCTS_DIR}/TAKUUID/TAKUUID.framework
 ${BUILT_PRODUCTS_DIR}/Then/Then.framework

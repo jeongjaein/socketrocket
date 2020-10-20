@@ -7,6 +7,7 @@
 
 import UIKit
 import Then
+import TAKUUID
 
 class ViewController: UIViewController {
     let socketTestButton = UIButton()
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         attribute()
         layout()
+        var uuid = TAKUUIDStorage.sharedInstance().findOrCreate()
     }
     
     func attribute() {

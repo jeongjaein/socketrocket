@@ -11,11 +11,12 @@ target 'socketRocket' do
     inherit! :search_paths
     # Pods for testing
   end
-  pod 'Socket.IO-Client-Swift'
   pod 'Then'
   pod 'Starscream'
   pod 'TAKUUID'
   pod 'KeychainSwift'
+  pod 'RxCocoa'
+  pod 'RxSwift'
   target 'socketRocketUITests' do
     # Pods for testing
   end
