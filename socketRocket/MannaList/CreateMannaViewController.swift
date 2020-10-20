@@ -48,7 +48,30 @@ class CreateMannaViewController: UIViewController {
         textField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: {
             self.view.endEditing(true)
             self.dismiss(animated: true, completion: nil)
+            self.postManna()
         }).disposed(by: disposeBag)
+    }
+    
+    func postManna() {
+        var param = Parameters()
+        if let uuid = AppDelegate.UUID {
+            param = [
+                "device_id" : uuid,
+                "manna_name" : textField.text
+            ]
+        }
+        
+        let result = AF.request("http://ec2-13-124-151-24.ap-northeast-2.compute.amazonaws.com:8888/manna", method: .post, parameters: param, encoding: JSONEncoding.default)
+        
+        result.responseJSON() { response in
+                print("JSON = \(try! response.result.get())")
+            if let jsonObject = try! response.result.get()  as? [String: Any] {
+                
+                print("타임스탬프 : \(jsonObject["create_timestamp"]!)")
+                print("만나네임 : \(jsonObject["manna_name"]!)")
+                print("uuid : \(jsonObject["uuid"]!)")
+            }
+        }
     }
 }
 

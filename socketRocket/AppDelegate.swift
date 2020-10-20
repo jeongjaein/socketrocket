@@ -10,10 +10,11 @@ import TAKUUID
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static var UUID: String?
     
     private func initUUID() {
         TAKUUIDStorage.sharedInstance().migrate()
-//        let UUID = TAKUUIDStorage.sharedInstance().findOrCreate()
+        AppDelegate.UUID = TAKUUIDStorage.sharedInstance().findOrCreate()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
