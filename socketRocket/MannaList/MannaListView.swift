@@ -8,9 +8,10 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SnapKit
 
 class MannaListView: UIViewController {
-    var MannaList = UITableView()
+    var mannaList = UITableView()
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -23,6 +24,21 @@ class MannaListView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MannaList.
+        attribute()
+        layout()
+    }
+    
+    func attribute() {
+        mannaList.do {
+            $0.backgroundColor = .cyan
+        }
+    }
+    
+    func layout() {
+        view.addSubview(mannaList)
+        
+        mannaList.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }

@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     @objc func goToSocketRocket() {
-        let view = socketView()
+        let view = MannaListView(user: User(id: "testMan", mannaList: []))
         view.modalPresentationStyle = .fullScreen
         self.present(view, animated: true, completion: nil)
     }
