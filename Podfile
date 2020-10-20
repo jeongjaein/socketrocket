@@ -14,7 +14,7 @@ target 'socketRocket' do
   pod 'Then'
   pod 'Starscream'
   pod 'TAKUUID'
-  pod 'KeychainSwift'
+  pod 'Alamofire'
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'SnapKit'

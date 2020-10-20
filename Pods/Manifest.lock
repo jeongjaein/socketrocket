@@ -1,5 +1,5 @@
 PODS:
-  - KeychainSwift (19.0.0)
+  - Alamofire (5.2.2)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -12,7 +12,7 @@ PODS:
   - Then (2.6.0)
 
 DEPENDENCIES:
-  - KeychainSwift
+  - Alamofire
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -22,7 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - KeychainSwift
+    - Alamofire
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -32,7 +32,7 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
-  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -41,6 +41,6 @@ SPEC CHECKSUMS:
   TAKUUID: 48d7c690d85a27e7beb79b099349f1cf0d60c928
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 263469b2ad7f08dd7e6f14f913663daf16541a0e
+PODFILE CHECKSUM: 8374043fe71922ef7ebb66b34aa1bf9fba4d9acd
 
 COCOAPODS: 1.9.1
