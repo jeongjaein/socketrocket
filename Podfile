@@ -13,6 +13,7 @@ target 'socketRocket' do
   end
   pod 'Socket.IO-Client-Swift'
   pod 'Then'
+  pod 'Starscream'
   target 'socketRocketUITests' do
     # Pods for testing
   end

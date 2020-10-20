@@ -6,11 +6,12 @@
 //
 
 import UIKit
-import SocketIO
+import Starscream
 
-class socketView: UIViewController {
+class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
     
-    var manager = SocketIOManager()
+    
+    let socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
     
     var connectButton = UIButton()
     var disconnectButton = UIButton()
@@ -20,9 +21,10 @@ class socketView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         attribute()
         layout()
+        socket.delegate = self
+        socket.pongDelegate = self
     }
     
     func attribute() {
@@ -43,6 +45,7 @@ class socketView: UIViewController {
             $0.placeholder = "할얘기 있으면 하세요"
             $0.backgroundColor = .white
             $0.tintColor = .black
+            $0.textColor = .black
         }
         emitButton.do {
             $0.backgroundColor = .orange
@@ -100,15 +103,39 @@ class socketView: UIViewController {
         }
     }
     @objc func didConnectButtonClicked() {
-        print("c")
+        socket.connect()
     }
     @objc func didDisConnectButtonClicked() {
-        print("d")
+        socket.disconnect()
     }
     @objc func didEmitButtonClicked() {
-        print("e")
+        socket.write(string: textField.text ?? "hi server")
     }
     @objc func didBackButtonClicked() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    //socket
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("socket connect")
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print("websocket is disconnected: \(error?.localizedDescription)")
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        print("got some text: \(text)")
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("got some data: \(data.count)")
+    }
+    
+    func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
+        print("Got pong! Maybe some data: \(data?.count)")
+    }
+    
 }
+
+
