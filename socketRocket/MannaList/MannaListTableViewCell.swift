@@ -12,7 +12,8 @@ class MannaListTableViewCell: UITableViewCell {
     
     var title = UILabel()
         
-    init() {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         layout()
     }
     
@@ -21,6 +22,8 @@ class MannaListTableViewCell: UITableViewCell {
     }
     
     func layout() {
+        addSubview(title)
+        
         title.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }

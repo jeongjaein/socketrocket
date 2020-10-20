@@ -9,7 +9,6 @@ import UIKit
 
 struct Manna {
     var id: String
-    var time: Date
+    var time: String
     var location: String
-    var userList: [User]
 }
