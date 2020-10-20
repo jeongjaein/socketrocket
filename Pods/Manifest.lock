@@ -1,25 +1,33 @@
 PODS:
+  - KeychainSwift (19.0.0)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
+  - TAKUUID (1.5.0)
   - Then (2.6.0)
 
 DEPENDENCIES:
+  - KeychainSwift
   - Socket.IO-Client-Swift
   - Starscream
+  - TAKUUID
   - Then
 
 SPEC REPOS:
   trunk:
+    - KeychainSwift
     - Socket.IO-Client-Swift
     - Starscream
+    - TAKUUID
     - Then
 
 SPEC CHECKSUMS:
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  TAKUUID: 48d7c690d85a27e7beb79b099349f1cf0d60c928
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 6d766dc0b139c58cecf604c8a42cd797301ea8c4
+PODFILE CHECKSUM: 31ad7a20e4d589b15de0ce26db5df323f4308a8e
 
 COCOAPODS: 1.9.1

@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import TAKUUID
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    private func initUUID() {
+        TAKUUIDStorage.sharedInstance().migrate()
+        print(TAKUUIDStorage.sharedInstance().migrate())
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

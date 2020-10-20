@@ -18,6 +18,7 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
     var textField = UITextField()
     var emitButton = UIButton()
     var backbutton = UIButton()
+    var receiveLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
             $0.backgroundColor = .white
             $0.tintColor = .black
             $0.textColor = .black
+            $0.textAlignment = .center
         }
         emitButton.do {
             $0.backgroundColor = .orange
@@ -57,6 +59,11 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
             $0.setTitle("뒤로가기", for: .normal)
             $0.addTarget(self, action: #selector(didBackButtonClicked), for: .touchUpInside)
         }
+        receiveLabel.do {
+            $0.backgroundColor = .white
+            $0.textColor = .black
+            $0.textAlignment = .center
+        }
     }
     
     func layout() {
@@ -65,6 +72,7 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
         view.addSubview(textField)
         view.addSubview(emitButton)
         view.addSubview(backbutton)
+        view.addSubview(receiveLabel)
         
         connectButton.do {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -101,6 +109,13 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
             $0.widthAnchor.constraint(equalToConstant: 100).isActive = true
             $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
+        receiveLabel.do {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.topAnchor.constraint(equalTo: emitButton.bottomAnchor,constant: 50).isActive = true
+            $0.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
+            $0.widthAnchor.constraint(equalToConstant: 100).isActive = true
+            $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
     }
     @objc func didConnectButtonClicked() {
         socket.connect()
@@ -110,12 +125,14 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
     }
     @objc func didEmitButtonClicked() {
         socket.write(string: textField.text ?? "hi server")
+        
     }
     @objc func didBackButtonClicked() {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //socket
+    
+    //SOCKET MANAGEMENT
     func websocketDidConnect(socket: WebSocketClient) {
         print("socket connect")
     }
@@ -126,6 +143,7 @@ class socketView: UIViewController, WebSocketDelegate, WebSocketPongDelegate {
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         print("got some text: \(text)")
+        receiveLabel.text = text
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {

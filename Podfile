@@ -14,6 +14,8 @@ target 'socketRocket' do
   pod 'Socket.IO-Client-Swift'
   pod 'Then'
   pod 'Starscream'
+  pod 'TAKUUID'
+  pod 'KeychainSwift'
   target 'socketRocketUITests' do
     # Pods for testing
   end
