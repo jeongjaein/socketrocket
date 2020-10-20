@@ -8,8 +8,8 @@
 import UIKit
 
 class MannaListTableViewCell: UITableViewCell {
-    static let id = "MAnnaListTableViewCell"
     
+    static let id = "MAnnaListTableViewCell"
     var title = UILabel()
         
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

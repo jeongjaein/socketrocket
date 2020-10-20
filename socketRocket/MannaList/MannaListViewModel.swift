@@ -16,5 +16,6 @@ class MannaListViewModel: MannaListViewModelProtocol {
     var model: MannaListModelProtocol?
     
     init() {
+        
     }
 }
