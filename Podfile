@@ -17,6 +17,7 @@ target 'socketRocket' do
   pod 'KeychainSwift'
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'SnapKit'
   target 'socketRocketUITests' do
     # Pods for testing
   end

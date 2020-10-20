@@ -19,6 +19,10 @@
 		CC22042D253DF65D001AC057 /* socketRocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC22042C253DF65D001AC057 /* socketRocketTests.swift */; };
 		CC220438253DF65D001AC057 /* socketRocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC220437253DF65D001AC057 /* socketRocketUITests.swift */; };
 		CCBD3153253EC280007F49A5 /* MannaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD3152253EC280007F49A5 /* MannaListView.swift */; };
+		CCBD3168253EC4F3007F49A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD3167253EC4F3007F49A5 /* User.swift */; };
+		CCBD316D253EC52B007F49A5 /* Manna.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD316C253EC52B007F49A5 /* Manna.swift */; };
+		CCBD3172253EC62C007F49A5 /* MannaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD3171253EC62C007F49A5 /* MannaListViewModel.swift */; };
+		CCBD3177253EC730007F49A5 /* MannaListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD3176253EC730007F49A5 /* MannaListModel.swift */; };
 		CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD595B253DF90C00EA90E5 /* socketView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		CC220439253DF65D001AC057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBD3141253EB588007F49A5 /* socketRocket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socketRocket.entitlements; sourceTree = "<group>"; };
 		CCBD3152253EC280007F49A5 /* MannaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MannaListView.swift; sourceTree = "<group>"; };
+		CCBD3167253EC4F3007F49A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCBD316C253EC52B007F49A5 /* Manna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manna.swift; sourceTree = "<group>"; };
+		CCBD3171253EC62C007F49A5 /* MannaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MannaListViewModel.swift; sourceTree = "<group>"; };
+		CCBD3176253EC730007F49A5 /* MannaListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MannaListModel.swift; sourceTree = "<group>"; };
 		CCFD595B253DF90C00EA90E5 /* socketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketView.swift; sourceTree = "<group>"; };
 		D659364C7B14E7A456E193E4 /* Pods-socketRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socketRocket.debug.xcconfig"; path = "Target Support Files/Pods-socketRocket/Pods-socketRocket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				CCBD3152253EC280007F49A5 /* MannaListView.swift */,
+				CCBD3171253EC62C007F49A5 /* MannaListViewModel.swift */,
+				CCBD3176253EC730007F49A5 /* MannaListModel.swift */,
+				CCBD3167253EC4F3007F49A5 /* User.swift */,
+				CCBD316C253EC52B007F49A5 /* Manna.swift */,
 			);
 			path = MannaList;
 			sourceTree = "<group>";
@@ -432,8 +444,12 @@
 			files = (
 				CC22041A253DF65B001AC057 /* ViewController.swift in Sources */,
 				CC220416253DF65B001AC057 /* AppDelegate.swift in Sources */,
+				CCBD3168253EC4F3007F49A5 /* User.swift in Sources */,
+				CCBD3177253EC730007F49A5 /* MannaListModel.swift in Sources */,
 				CC220418253DF65B001AC057 /* SceneDelegate.swift in Sources */,
 				CCFD595C253DF90C00EA90E5 /* socketView.swift in Sources */,
+				CCBD316D253EC52B007F49A5 /* Manna.swift in Sources */,
+				CCBD3172253EC62C007F49A5 /* MannaListViewModel.swift in Sources */,
 				CCBD3153253EC280007F49A5 /* MannaListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
